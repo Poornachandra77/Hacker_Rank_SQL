@@ -71,8 +71,56 @@ SELECT Name FROM city WHERE Countrycode = 'JPN';
 Query a list of CITY and STATE from the STATION table.
 The STATION table is described as follows:
 
-![alt text](https://github.com/Poornachandra77/Hacker_Rank_SQL/blob/main/hk1.jpeg?raw=true)
+![alt text](https://github.com/Poornachandra77/Hacker_Rank_SQL/blob/main/hk2.jpeg?raw=true)
 
 Solution:-
 
 SELECT City,State From Station;
+
+8.  Weather Observation Station 3
+
+Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+The STATION table is described as follows:
+
+
+![alt text](https://github.com/Poornachandra77/Hacker_Rank_SQL/blob/main/hk2.jpeg?raw=true)
+
+Solution:-
+
+SELECT DISTINCT CITY From Station WHERE MOD(ID,2) = 0 ;
+
+9.  Weather Observation Station 4
+
+Find the difference between the total number of CITY entries in the table and the number of distinct CITY entries in the table.
+The STATION table is described as follows:
+
+![alt text](https://github.com/Poornachandra77/Hacker_Rank_SQL/blob/main/hk2.jpeg?raw=true)
+
+Solution:-
+
+SELECT COUNT(CITY) - COUNT(DISTINCT CITY) FROM STATION;
+
+10.  Weather Observation Station 5
+
+Query the two cities in STATION with the shortest and longest CITY names, as well as their respective lengths (i.e.: number of characters in the name). If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.
+The STATION table is described as follows:
+
+
+![alt text](https://github.com/Poornachandra77/Hacker_Rank_SQL/blob/main/hk2.jpeg?raw=true)
+
+Solution:-
+
+SELECT CITY, LENGTH(CITY) FROM STATION ORDER BY LENGTH(CITY) DESC, City ASC LIMIT 1;
+SELECT CITY, LENGTH(CITY) FROM STATION ORDER BY LENGTH(CITY) ASC, City ASC LIMIT 1;
+
+11. Weather Observation Station 6
+
+Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+Input Format
+The STATION table is described as follows:
+
+![alt text](https://github.com/Poornachandra77/Hacker_Rank_SQL/blob/main/hk2.jpeg?raw=true)
+
+Solution:-
+
+SELECT Distinct(CITY) FROM STATION WHERE CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%' ORDER BY CITY;
