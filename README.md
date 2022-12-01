@@ -124,3 +124,30 @@ The STATION table is described as follows:
 Solution:-
 
 SELECT Distinct(CITY) FROM STATION WHERE CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%' ORDER BY CITY;
+
+12. Weather Observation Station 7
+
+Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+Input Format
+The STATION table is described as follows:
+
+![alt text](https://github.com/Poornachandra77/Hacker_Rank_SQL/blob/main/hk2.jpeg?raw=true)
+
+Solution:-
+
+Select Distinct(City) From Station WHERE City like '%a' OR City like '%e' OR City like '%i' OR City like '%o' OR City like '%u' ORDER By CITY ASC;
+
+
+13. Weather Observation Station 8
+
+Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
+Input Format
+The STATION table is described as follows:
+
+![alt text](https://github.com/Poornachandra77/Hacker_Rank_SQL/blob/main/hk2.jpeg?raw=true)
+
+Solution:-
+
+Select Distinct(City) from Station Where (City like 'A%' OR City like 'E%' OR City like 'I%' OR City like 'O%' OR City like 'U%') AND (City like '%a' OR City like '%e' OR City like '%i' OR City like '%o' OR City like '%u') ORDER BY City ASC;
+
+
