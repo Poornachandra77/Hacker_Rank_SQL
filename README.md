@@ -20,6 +20,7 @@ The CITY table is described as follows:
 
 Solution:-
 
+
 SELECT NAME FROM CITY WHERE Population >120000 AND CountryCode = 'USA';
 
 3.   Select All
